@@ -28,22 +28,28 @@ df=pd.read_csv("/SAMPLEIDS (3).csv")
 df
 ```
 <img width="1012" height="705" alt="image" src="https://github.com/user-attachments/assets/fa1eea7a-f3f8-4f3b-93c3-0f266d4fd2b5" />
+
 ```
 df.isnull().sum()
 ```
 <img width="742" height="632" alt="image" src="https://github.com/user-attachments/assets/9d8d26e7-14aa-4b21-be80-18c94f72c419" />
+
 ```
 df.info()
 ```
 <img width="701" height="476" alt="image" src="https://github.com/user-attachments/assets/fd1438bf-84de-4551-9e8b-73d7f86cc491" />
+
 ```
 df.describe()
 ```
 <img width="1047" height="422" alt="image" src="https://github.com/user-attachments/assets/d6eb808d-8f5b-4548-bda3-ebf2e19e355d" />
+
 ```
 df.shape
 ```
+
 <img width="597" height="92" alt="image" src="https://github.com/user-attachments/assets/7f7a69e0-b97c-468f-8c34-d77001f7a5a2" />
+
 ```
 df.head(3)
 ```
@@ -53,43 +59,53 @@ df.head(3)
 df.tail(3)
 ```
 <img width="1077" height="222" alt="image" src="https://github.com/user-attachments/assets/0c78189e-212d-43ba-9032-6b5155d587c1" />
+
 ```
 df.dropna(how='any').shape
 df.shape
 ```
 <img width="806" height="195" alt="image" src="https://github.com/user-attachments/assets/692c87d2-4e08-4134-b627-42bf21298190" />
+
 ```
 df.TOTAL.fillna(mn,inplace=True)
 ```
 <img width="1727" height="231" alt="image" src="https://github.com/user-attachments/assets/86551ce4-33f6-47de-aae5-1f91f5000e69" />
+
 ```
 df.isna().sum()
 ```
 <img width="692" height="622" alt="image" src="https://github.com/user-attachments/assets/ddc31fb4-391a-40cb-a5ed-dbb03edbd59f" />
+
 ```
 df['M1'].fillna(method='ffill',inplace=True)
 ```
 <img width="1572" height="253" alt="image" src="https://github.com/user-attachments/assets/bc829a40-a5d4-49ce-b095-a1f884185a76" />
+
 ```
 df.isna().sum()
 ```
 <img width="997" height="625" alt="image" src="https://github.com/user-attachments/assets/0689f41e-62df-43d7-8638-024f8351f248" />
+
 ```
 df['M2'].fillna(method='ffill',inplace=True)
 ```
 <img width="1660" height="267" alt="image" src="https://github.com/user-attachments/assets/9d8975c3-0d33-4053-b9f6-dfedf3c4318b" />
+
 ```
 df.isna().sum()
 ```
 <img width="736" height="608" alt="image" src="https://github.com/user-attachments/assets/983a4472-8648-4ab9-b4a8-7e09ee0f9c7b" />
+
 ```
 df['M3'].fillna(method='bfill',inplace=True)
 ```
 <img width="1672" height="268" alt="image" src="https://github.com/user-attachments/assets/35415455-2440-4492-a116-966a88cd60cd" />
+
 ```
 df.isna().sum()
 ```
 <img width="620" height="625" alt="image" src="https://github.com/user-attachments/assets/a2f69864-25c8-48bd-8fb8-a65023118561" />
+
 ```
 df['M4'].fillna(method='ffill',inplace=True)
 ```
