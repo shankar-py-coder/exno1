@@ -110,39 +110,47 @@ df.isna().sum()
 df['M4'].fillna(method='ffill',inplace=True)
 ```
 <img width="1712" height="273" alt="image" src="https://github.com/user-attachments/assets/8ff906cb-e015-4a9a-a637-a0676ef4b4e4" />
+
 ```
 df.isna().sum()
 ```
 <img width="752" height="607" alt="image" src="https://github.com/user-attachments/assets/d4e4a2d8-31b1-4c7f-b12d-3adec6cc6453" />
+
 ```
 df.drop_duplicates(inplace=True)
 df
 ```
 <img width="1016" height="702" alt="image" src="https://github.com/user-attachments/assets/6cbc33d5-be4c-4acb-871d-badf1ba0bab6" />
+
 ```
 import seaborn as sns
 sns.heatmap(df.isnull(),yticklabels=False,annot=True)
 ```
 <img width="706" height="612" alt="image" src="https://github.com/user-attachments/assets/a4ef1512-6c9f-4a35-81a2-f9a9bad08e6e" />
+
 ```
 df.dropna(inplace=True)
 sns.heatmap(df.isnull(),yticklabels=False,annot=True)
 ```
 <img width="731" height="616" alt="image" src="https://github.com/user-attachments/assets/f56802c0-ac38-48ff-9757-37b8e850e7cf" />
+
 ```
 age=[1,3,28,27,25,92,30,39,40,50,26,24,29,94]
 af=pd.DataFrame(age)
 af
 ```
 <img width="432" height="582" alt="image" src="https://github.com/user-attachments/assets/f4687d43-e96f-4035-bcee-54a2b3fe66f9" />
+
 ```
 sns.boxplot(data=af)
 ```
 <img width="711" height="537" alt="image" src="https://github.com/user-attachments/assets/3f3cd899-9365-462a-af6e-bcf915c3a7ed" />
+
 ```
 sns.scatterplot(data=af)
 ```
 <img width="692" height="527" alt="image" src="https://github.com/user-attachments/assets/1404ed09-684b-4f71-bfd9-c39efb5d2c81" />
+
 ```
 Q1=np.percentile(af,25)
 Q3=np.percentile(af,75)
@@ -150,6 +158,7 @@ IQR=Q3-Q1
 IQR
 ```
 <img width="392" height="160" alt="image" src="https://github.com/user-attachments/assets/f6f1581e-f419-451f-b9d6-f2fa28a8c209" />
+
 ```
 lower_bound=Q1-1.5*IQR
 upper_bound=Q3+1.5*IQR
@@ -157,6 +166,7 @@ lower_bound
 upper_bound
 ```
 <img width="767" height="290" alt="image" src="https://github.com/user-attachments/assets/0b43db0b-5ba9-4632-b513-cf153978d8fe" />
+
 ```
 outliers=[x for x in age if x<lower_bound or x>upper_bound]
 print('Q1:',Q1)
@@ -167,16 +177,19 @@ print('upper_bound:',upper_bound)
 print('outliers:',outliers)
 ```
 <img width="920" height="323" alt="image" src="https://github.com/user-attachments/assets/9bcbdbfa-0cdd-4eb0-9893-9485b9cd41b7" />
+
 ```
 af=af[((af>lower_bound)&(af<upper_bound))]
 af
 ```
 <img width="533" height="597" alt="image" src="https://github.com/user-attachments/assets/e6baf770-9bd8-47c2-8c39-27889e49d892" />
+
 ```
 af.dropna(inplace=True)
 af
 ```
 <img width="282" height="443" alt="image" src="https://github.com/user-attachments/assets/1da55fd4-8864-4af0-9832-59d010bae626" />
+
 ```
 data=[1,2,2,2,3,1,1,15,2,2,2,3,1,1,2]
 mean=np.mean(data)
@@ -185,6 +198,7 @@ print("mean of the dataset is",mean)
 print("std. deviation is",std)
 ```
 <img width="832" height="207" alt="image" src="https://github.com/user-attachments/assets/3af11a25-c89e-4549-8481-c45ffed6b9f0" />
+
 ```
 threshold=3
 outlier=[]
@@ -195,6 +209,7 @@ for i in data:
 print("outlier in dataset is",outlier)
 ```
 <img width="858" height="231" alt="image" src="https://github.com/user-attachments/assets/052295e9-354d-4c0d-8eef-c472072e40ad" />
+
 
 # Result
 Thus the python program for reading the given data and perform data cleaning and save the cleaned data to a file is executed.
